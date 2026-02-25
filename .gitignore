@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Build / output
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs and debug
+npm-debug.log*
+*.log
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# API
+api/dist/
+
+# Admin
+admin/.next/
+
+# Misc
+*.swp
+*.swo

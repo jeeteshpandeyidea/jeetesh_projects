@@ -1,0 +1,5729 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/": {
+      "get": {
+        "operationId": "AppController_getHello",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "App"
+        ]
+      }
+    },
+    "/roles": {
+      "post": {
+        "operationId": "RolesController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRoleDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Roles"
+        ]
+      },
+      "get": {
+        "operationId": "RolesController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Roles"
+        ]
+      }
+    },
+    "/roles/{id}": {
+      "get": {
+        "operationId": "RolesController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Roles"
+        ]
+      },
+      "patch": {
+        "operationId": "RolesController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Roles"
+        ]
+      },
+      "delete": {
+        "operationId": "RolesController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Roles"
+        ]
+      }
+    },
+    "/role-permissions": {
+      "post": {
+        "operationId": "RolePermissionsController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRolePermissionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "role-permissions"
+        ]
+      },
+      "get": {
+        "operationId": "RolePermissionsController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "role-permissions"
+        ]
+      }
+    },
+    "/role-permissions/{id}": {
+      "get": {
+        "operationId": "RolePermissionsController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "role-permissions"
+        ]
+      },
+      "patch": {
+        "operationId": "RolePermissionsController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRolePermissionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "role-permissions"
+        ]
+      },
+      "delete": {
+        "operationId": "RolePermissionsController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "role-permissions"
+        ]
+      }
+    },
+    "/users": {
+      "post": {
+        "operationId": "UsersController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "users"
+        ]
+      },
+      "get": {
+        "operationId": "UsersController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "operationId": "UsersController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "users"
+        ]
+      },
+      "patch": {
+        "operationId": "UsersController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "users"
+        ]
+      },
+      "delete": {
+        "operationId": "UsersController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/user-sessions": {
+      "post": {
+        "operationId": "UserSessionsController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserSessionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "user-sessions"
+        ]
+      },
+      "get": {
+        "operationId": "UserSessionsController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "user-sessions"
+        ]
+      }
+    },
+    "/user-sessions/{id}": {
+      "get": {
+        "operationId": "UserSessionsController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "user-sessions"
+        ]
+      },
+      "patch": {
+        "operationId": "UserSessionsController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserSessionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "user-sessions"
+        ]
+      },
+      "delete": {
+        "operationId": "UserSessionsController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "user-sessions"
+        ]
+      }
+    },
+    "/login-logs": {
+      "post": {
+        "operationId": "LoginLogsController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateLoginLogDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "login-logs"
+        ]
+      },
+      "get": {
+        "operationId": "LoginLogsController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "login-logs"
+        ]
+      }
+    },
+    "/login-logs/{id}": {
+      "get": {
+        "operationId": "LoginLogsController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "login-logs"
+        ]
+      },
+      "patch": {
+        "operationId": "LoginLogsController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateLoginLogDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "login-logs"
+        ]
+      },
+      "delete": {
+        "operationId": "LoginLogsController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "login-logs"
+        ]
+      }
+    },
+    "/menus": {
+      "post": {
+        "operationId": "MenuController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMenuDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "menus"
+        ]
+      },
+      "get": {
+        "operationId": "MenuController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "menus"
+        ]
+      }
+    },
+    "/menus/{id}": {
+      "get": {
+        "operationId": "MenuController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "menus"
+        ]
+      },
+      "patch": {
+        "operationId": "MenuController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMenuDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "menus"
+        ]
+      },
+      "delete": {
+        "operationId": "MenuController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "menus"
+        ]
+      }
+    },
+    "/menu-routes": {
+      "post": {
+        "operationId": "MenuRouteController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMenuRouteDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "menu-routes"
+        ]
+      },
+      "get": {
+        "operationId": "MenuRouteController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "menu-routes"
+        ]
+      }
+    },
+    "/menu-routes/{id}": {
+      "get": {
+        "operationId": "MenuRouteController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "menu-routes"
+        ]
+      },
+      "patch": {
+        "operationId": "MenuRouteController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMenuRouteDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "menu-routes"
+        ]
+      },
+      "delete": {
+        "operationId": "MenuRouteController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "menu-routes"
+        ]
+      }
+    },
+    "/audit-logs": {
+      "post": {
+        "operationId": "AuditLogsController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAuditLogDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "audit-logs"
+        ]
+      },
+      "get": {
+        "operationId": "AuditLogsController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "audit-logs"
+        ]
+      }
+    },
+    "/audit-logs/{id}": {
+      "get": {
+        "operationId": "AuditLogsController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "audit-logs"
+        ]
+      },
+      "patch": {
+        "operationId": "AuditLogsController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAuditLogDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "audit-logs"
+        ]
+      },
+      "delete": {
+        "operationId": "AuditLogsController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "audit-logs"
+        ]
+      }
+    },
+    "/user-resets": {
+      "post": {
+        "operationId": "UserResetsController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserResetDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "user-resets"
+        ]
+      },
+      "get": {
+        "operationId": "UserResetsController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "user-resets"
+        ]
+      }
+    },
+    "/user-resets/{id}": {
+      "get": {
+        "operationId": "UserResetsController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "user-resets"
+        ]
+      },
+      "patch": {
+        "operationId": "UserResetsController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserResetDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "user-resets"
+        ]
+      },
+      "delete": {
+        "operationId": "UserResetsController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "user-resets"
+        ]
+      }
+    },
+    "/auth/register": {
+      "post": {
+        "operationId": "AuthController_register",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "operationId": "AuthController_login",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/event-types": {
+      "post": {
+        "operationId": "EventTypesController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEventTypeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "event-types"
+        ]
+      },
+      "get": {
+        "operationId": "EventTypesController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "event-types"
+        ]
+      }
+    },
+    "/event-types/{id}": {
+      "get": {
+        "operationId": "EventTypesController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "event-types"
+        ]
+      },
+      "patch": {
+        "operationId": "EventTypesController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateEventTypeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "event-types"
+        ]
+      },
+      "delete": {
+        "operationId": "EventTypesController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "event-types"
+        ]
+      }
+    },
+    "/game-type": {
+      "post": {
+        "operationId": "GameTypesController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGameTypeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "game-type"
+        ]
+      },
+      "get": {
+        "operationId": "GameTypesController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "game-type"
+        ]
+      }
+    },
+    "/game-type/{id}": {
+      "get": {
+        "operationId": "GameTypesController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "game-type"
+        ]
+      },
+      "patch": {
+        "operationId": "GameTypesController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGameTypeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "game-type"
+        ]
+      },
+      "delete": {
+        "operationId": "GameTypesController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "game-type"
+        ]
+      }
+    },
+    "/eligibility": {
+      "post": {
+        "operationId": "EligibilityController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEligibilityDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "eligibility"
+        ]
+      },
+      "get": {
+        "operationId": "EligibilityController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "eligibility"
+        ]
+      }
+    },
+    "/eligibility/{id}": {
+      "get": {
+        "operationId": "EligibilityController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "eligibility"
+        ]
+      },
+      "patch": {
+        "operationId": "EligibilityController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateEligibilityDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "eligibility"
+        ]
+      },
+      "delete": {
+        "operationId": "EligibilityController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "eligibility"
+        ]
+      }
+    },
+    "/grid-sizes": {
+      "post": {
+        "operationId": "GridSizesController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGridSizeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "grid-sizes"
+        ]
+      },
+      "get": {
+        "operationId": "GridSizesController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "grid-sizes"
+        ]
+      }
+    },
+    "/grid-sizes/{id}": {
+      "get": {
+        "operationId": "GridSizesController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "grid-sizes"
+        ]
+      },
+      "patch": {
+        "operationId": "GridSizesController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGridSizeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "grid-sizes"
+        ]
+      },
+      "delete": {
+        "operationId": "GridSizesController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "grid-sizes"
+        ]
+      }
+    },
+    "/events": {
+      "post": {
+        "operationId": "EventsController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEventDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "events"
+        ]
+      },
+      "get": {
+        "operationId": "EventsController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "events"
+        ]
+      }
+    },
+    "/events/{id}": {
+      "get": {
+        "operationId": "EventsController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "events"
+        ]
+      },
+      "patch": {
+        "operationId": "EventsController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateEventDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "events"
+        ]
+      },
+      "delete": {
+        "operationId": "EventsController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "events"
+        ]
+      }
+    },
+    "/property-types": {
+      "post": {
+        "operationId": "PropertyTypesController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePropertyTypeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "property-types"
+        ]
+      },
+      "get": {
+        "operationId": "PropertyTypesController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "property-types"
+        ]
+      }
+    },
+    "/property-types/{id}": {
+      "get": {
+        "operationId": "PropertyTypesController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "property-types"
+        ]
+      },
+      "patch": {
+        "operationId": "PropertyTypesController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePropertyTypeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "property-types"
+        ]
+      },
+      "delete": {
+        "operationId": "PropertyTypesController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "property-types"
+        ]
+      }
+    },
+    "/facilities": {
+      "post": {
+        "operationId": "FacilitiesController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFacilityDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "facilities"
+        ]
+      },
+      "get": {
+        "operationId": "FacilitiesController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "facilities"
+        ]
+      }
+    },
+    "/facilities/{id}": {
+      "get": {
+        "operationId": "FacilitiesController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "facilities"
+        ]
+      },
+      "patch": {
+        "operationId": "FacilitiesController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFacilityDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "facilities"
+        ]
+      },
+      "delete": {
+        "operationId": "FacilitiesController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "facilities"
+        ]
+      }
+    },
+    "/room-types": {
+      "post": {
+        "operationId": "RoomTypesController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRoomTypeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "room-types"
+        ]
+      },
+      "get": {
+        "operationId": "RoomTypesController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "room-types"
+        ]
+      }
+    },
+    "/room-types/{id}": {
+      "get": {
+        "operationId": "RoomTypesController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "room-types"
+        ]
+      },
+      "patch": {
+        "operationId": "RoomTypesController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoomTypeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "room-types"
+        ]
+      },
+      "delete": {
+        "operationId": "RoomTypesController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "room-types"
+        ]
+      }
+    },
+    "/categories": {
+      "post": {
+        "operationId": "CategoriesController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCategoryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "categories"
+        ]
+      },
+      "get": {
+        "operationId": "CategoriesController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "categories"
+        ]
+      }
+    },
+    "/categories/active": {
+      "get": {
+        "operationId": "CategoriesController_findActive",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "categories"
+        ]
+      }
+    },
+    "/categories/{id}": {
+      "get": {
+        "operationId": "CategoriesController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "categories"
+        ]
+      },
+      "patch": {
+        "operationId": "CategoriesController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCategoryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "categories"
+        ]
+      },
+      "delete": {
+        "operationId": "CategoriesController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "categories"
+        ]
+      }
+    },
+    "/subcategories": {
+      "post": {
+        "operationId": "SubCategoriesController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSubCategoryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "subcategories"
+        ]
+      },
+      "get": {
+        "operationId": "SubCategoriesController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "subcategories"
+        ]
+      }
+    },
+    "/subcategories/{id}": {
+      "get": {
+        "operationId": "SubCategoriesController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "subcategories"
+        ]
+      },
+      "patch": {
+        "operationId": "SubCategoriesController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSubCategoryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "subcategories"
+        ]
+      },
+      "delete": {
+        "operationId": "SubCategoriesController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "subcategories"
+        ]
+      }
+    },
+    "/card-generation-type": {
+      "post": {
+        "operationId": "CardGenerationController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCardGenerationDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "card-generation-type"
+        ]
+      },
+      "get": {
+        "operationId": "CardGenerationController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "card-generation-type"
+        ]
+      }
+    },
+    "/card-generation-type/{id}": {
+      "get": {
+        "operationId": "CardGenerationController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "card-generation-type"
+        ]
+      },
+      "patch": {
+        "operationId": "CardGenerationController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCardGenerationDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "card-generation-type"
+        ]
+      },
+      "delete": {
+        "operationId": "CardGenerationController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "card-generation-type"
+        ]
+      }
+    },
+    "/winning-pattern": {
+      "post": {
+        "operationId": "WinningPatternController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateWinningPatternDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "winning-pattern"
+        ]
+      },
+      "get": {
+        "operationId": "WinningPatternController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "winning-pattern"
+        ]
+      }
+    },
+    "/winning-pattern/{id}": {
+      "get": {
+        "operationId": "WinningPatternController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "winning-pattern"
+        ]
+      },
+      "patch": {
+        "operationId": "WinningPatternController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateWinningPatternDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "winning-pattern"
+        ]
+      },
+      "delete": {
+        "operationId": "WinningPatternController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "winning-pattern"
+        ]
+      }
+    },
+    "/winning-pattern-types": {
+      "post": {
+        "operationId": "WinningPatternTypesController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateWinningPatternTypeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "winning-pattern-types"
+        ]
+      },
+      "get": {
+        "operationId": "WinningPatternTypesController_findAll",
+        "parameters": [
+          {
+            "name": "winning_pattern_id",
+            "required": false,
+            "in": "query",
+            "description": "Filter by winning pattern ID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "winning-pattern-types"
+        ]
+      }
+    },
+    "/winning-pattern-types/{id}": {
+      "get": {
+        "operationId": "WinningPatternTypesController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "winning-pattern-types"
+        ]
+      },
+      "patch": {
+        "operationId": "WinningPatternTypesController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateWinningPatternTypeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "winning-pattern-types"
+        ]
+      },
+      "delete": {
+        "operationId": "WinningPatternTypesController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "winning-pattern-types"
+        ]
+      }
+    },
+    "/games": {
+      "post": {
+        "operationId": "GamesController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGameDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "games"
+        ]
+      },
+      "get": {
+        "operationId": "GamesController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "games"
+        ]
+      }
+    },
+    "/games/open": {
+      "get": {
+        "operationId": "GamesController_findOpen",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "games"
+        ]
+      }
+    },
+    "/games/my": {
+      "get": {
+        "operationId": "GamesController_findMyGames",
+        "parameters": [
+          {
+            "name": "userId",
+            "required": true,
+            "in": "query",
+            "description": "Current user ID (or set via auth)",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "games"
+        ]
+      }
+    },
+    "/games/join": {
+      "post": {
+        "operationId": "GamesController_joinByCode",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JoinGameDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "games"
+        ]
+      }
+    },
+    "/games/{id}/leave": {
+      "post": {
+        "operationId": "GamesController_leave",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LeaveGameDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "games"
+        ]
+      }
+    },
+    "/games/{id}": {
+      "get": {
+        "operationId": "GamesController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "games"
+        ]
+      },
+      "patch": {
+        "operationId": "GamesController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-admin-bypass",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Admin-Bypass",
+            "in": "header",
+            "description": "Set to true to bypass \"cannot start if no players\" (admin only)",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGameDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "games"
+        ]
+      },
+      "delete": {
+        "operationId": "GamesController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "games"
+        ]
+      }
+    },
+    "/games/{id}/start": {
+      "post": {
+        "operationId": "GamesController_startGame",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-admin-bypass",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "X-Admin-Bypass",
+            "in": "header",
+            "description": "Set to true to start with no players (admin only)",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "games"
+        ]
+      }
+    },
+    "/game-invites": {
+      "post": {
+        "operationId": "GameInvitesController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateInviteDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "game-invites"
+        ]
+      }
+    },
+    "/game-invites/game/{gameId}": {
+      "get": {
+        "operationId": "GameInvitesController_findByGame",
+        "parameters": [
+          {
+            "name": "gameId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "game-invites"
+        ]
+      }
+    },
+    "/game-invites/{id}": {
+      "get": {
+        "operationId": "GameInvitesController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "game-invites"
+        ]
+      }
+    },
+    "/game-invites/{id}/accept": {
+      "post": {
+        "operationId": "GameInvitesController_accept",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "game-invites"
+        ]
+      }
+    },
+    "/game-invites/{id}/revoke": {
+      "post": {
+        "operationId": "GameInvitesController_revoke",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "revokedBy",
+            "required": true,
+            "in": "query",
+            "description": "User ID of revoker (must be inviter)",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "game-invites"
+        ]
+      }
+    },
+    "/rewards": {
+      "post": {
+        "operationId": "RewardsController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRewardDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "rewards"
+        ]
+      },
+      "get": {
+        "operationId": "RewardsController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "rewards"
+        ]
+      }
+    },
+    "/rewards/{id}": {
+      "get": {
+        "operationId": "RewardsController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "rewards"
+        ]
+      },
+      "patch": {
+        "operationId": "RewardsController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRewardDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "rewards"
+        ]
+      },
+      "delete": {
+        "operationId": "RewardsController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "rewards"
+        ]
+      }
+    },
+    "/achievement-criteria": {
+      "post": {
+        "operationId": "AchievementCriteriaController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAchievementCriteriaDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "achievement-criteria"
+        ]
+      },
+      "get": {
+        "operationId": "AchievementCriteriaController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "achievement-criteria"
+        ]
+      }
+    },
+    "/achievement-criteria/{id}": {
+      "get": {
+        "operationId": "AchievementCriteriaController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "achievement-criteria"
+        ]
+      },
+      "patch": {
+        "operationId": "AchievementCriteriaController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAchievementCriteriaDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "achievement-criteria"
+        ]
+      },
+      "delete": {
+        "operationId": "AchievementCriteriaController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "achievement-criteria"
+        ]
+      }
+    },
+    "/assets/upload": {
+      "post": {
+        "operationId": "AssetsController_uploadImage",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "image": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "assets"
+        ]
+      }
+    },
+    "/assets": {
+      "post": {
+        "operationId": "AssetsController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAssetDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "assets"
+        ]
+      },
+      "get": {
+        "operationId": "AssetsController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "assets"
+        ]
+      }
+    },
+    "/assets/{id}": {
+      "get": {
+        "operationId": "AssetsController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "assets"
+        ]
+      },
+      "patch": {
+        "operationId": "AssetsController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAssetDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "assets"
+        ]
+      },
+      "delete": {
+        "operationId": "AssetsController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "assets"
+        ]
+      }
+    },
+    "/game-cards/generate": {
+      "post": {
+        "operationId": "GameCardsController_generate",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GenerateCardDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "game-cards"
+        ]
+      }
+    },
+    "/game-cards/{id}/regenerate": {
+      "post": {
+        "operationId": "GameCardsController_regenerate",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "game-cards"
+        ]
+      }
+    },
+    "/game-cards": {
+      "get": {
+        "operationId": "GameCardsController_findByGame",
+        "parameters": [
+          {
+            "name": "gameId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "game-cards"
+        ]
+      }
+    },
+    "/game-cards/{id}": {
+      "get": {
+        "operationId": "GameCardsController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "game-cards"
+        ]
+      }
+    },
+    "/game-cards/{id}/squares": {
+      "patch": {
+        "operationId": "GameCardsController_updateSquares",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCardSquaresDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "game-cards"
+        ]
+      }
+    },
+    "/game-cards/{id}/claim": {
+      "post": {
+        "operationId": "GameCardsController_claimSquare",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClaimSquareDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "game-cards"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Nest API",
+    "description": "API documentation",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "schemas": {
+      "CreateRoleDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Unique role name",
+            "example": "Admin"
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional description of the role",
+            "example": "Has full access to all resources"
+          },
+          "permissions": {
+            "description": "List of permission identifiers",
+            "example": [
+              "user.read",
+              "user.write"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateRoleDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Unique role name",
+            "example": "Admin"
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional description of the role",
+            "example": "Has full access to all resources"
+          },
+          "permissions": {
+            "description": "List of permission identifiers",
+            "example": [
+              "user.read",
+              "user.write"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "CreateRolePermissionDto": {
+        "type": "object",
+        "properties": {
+          "role_id": {
+            "type": "string",
+            "description": "Role identifier (e.g. Role document ID)",
+            "example": "665f1a4b2c3d4e5f6a7b8c9d"
+          },
+          "module": {
+            "type": "string",
+            "description": "Module name this permission applies to",
+            "example": "users"
+          },
+          "permission": {
+            "type": "string",
+            "description": "Permission key or action",
+            "example": "users.read"
+          },
+          "menu_id": {
+            "type": "string",
+            "description": "Menu identifier this permission is linked to (e.g. MenuRoute ID)",
+            "example": "665f1a4b2c3d4e5f6a7b8d0e"
+          }
+        },
+        "required": [
+          "role_id",
+          "module",
+          "permission",
+          "menu_id"
+        ]
+      },
+      "UpdateRolePermissionDto": {
+        "type": "object",
+        "properties": {
+          "role_id": {
+            "type": "string",
+            "description": "Role identifier (e.g. Role document ID)",
+            "example": "665f1a4b2c3d4e5f6a7b8c9d"
+          },
+          "module": {
+            "type": "string",
+            "description": "Module name this permission applies to",
+            "example": "users"
+          },
+          "permission": {
+            "type": "string",
+            "description": "Permission key or action",
+            "example": "users.read"
+          },
+          "menu_id": {
+            "type": "string",
+            "description": "Menu identifier this permission is linked to (e.g. MenuRoute ID)",
+            "example": "665f1a4b2c3d4e5f6a7b8d0e"
+          }
+        }
+      },
+      "CreateUserDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "description": "Unique email address of the user",
+            "example": "john.doe@example.com"
+          },
+          "username": {
+            "type": "string",
+            "description": "Unique username of the user",
+            "example": "john_doe"
+          },
+          "password": {
+            "type": "string",
+            "description": "User password (plaintext here, should be hashed before saving)",
+            "example": "MyStrongP@ssw0rd"
+          },
+          "roles": {
+            "description": "List of role IDs or names assigned to the user",
+            "example": [
+              "admin",
+              "editor"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "fullName": {
+            "type": "string",
+            "description": "Full name of the user",
+            "example": "John Doe"
+          },
+          "phone": {
+            "type": "string",
+            "description": "Phone number of the user (unique when provided; required in admin)",
+            "example": "+1-555-1234567"
+          },
+          "profilePhoto": {
+            "type": "string",
+            "description": "URL of the user profile photo",
+            "example": "https://example.com/avatar.jpg"
+          }
+        },
+        "required": [
+          "email",
+          "username",
+          "password",
+          "fullName"
+        ]
+      },
+      "UpdateUserDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "description": "Unique email address of the user",
+            "example": "john.doe@example.com"
+          },
+          "username": {
+            "type": "string",
+            "description": "Unique username of the user",
+            "example": "john_doe"
+          },
+          "password": {
+            "type": "string",
+            "description": "User password (plaintext here, should be hashed before saving)",
+            "example": "MyStrongP@ssw0rd"
+          },
+          "roles": {
+            "description": "List of role IDs or names assigned to the user",
+            "example": [
+              "admin",
+              "editor"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "fullName": {
+            "type": "string",
+            "description": "Full name of the user",
+            "example": "John Doe"
+          },
+          "phone": {
+            "type": "string",
+            "description": "Phone number of the user",
+            "example": "+1-555-1234567"
+          },
+          "profilePhoto": {
+            "type": "string",
+            "description": "URL of the user profile photo",
+            "example": "https://example.com/avatar.jpg"
+          },
+          "emailVerified": {
+            "type": "boolean",
+            "description": "Whether the email is verified",
+            "example": true
+          },
+          "phoneVerified": {
+            "type": "boolean",
+            "description": "Whether the phone is verified",
+            "example": false
+          },
+          "is_deleted": {
+            "type": "boolean",
+            "description": "Soft delete flag",
+            "example": false
+          },
+          "status": {
+            "type": "string",
+            "description": "User status",
+            "example": "active"
+          }
+        }
+      },
+      "CreateUserSessionDto": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "User identifier (e.g. User document ID)",
+            "example": "665f1a4b2c3d4e5f6a7b8c9d"
+          },
+          "accessToken": {
+            "type": "string",
+            "description": "Access token value",
+            "example": "access-token-jwt"
+          },
+          "refreshToken": {
+            "type": "string",
+            "description": "Refresh token value",
+            "example": "refresh-token-uuid-or-jwt"
+          },
+          "deviceId": {
+            "type": "string",
+            "description": "Unique device identifier",
+            "example": "device-uuid-12345"
+          },
+          "deviceInfo": {
+            "type": "string",
+            "description": "Information about the device (agent, OS, etc.)",
+            "example": "Chrome on Windows 11"
+          },
+          "deviceName": {
+            "type": "string",
+            "description": "Device name or description",
+            "example": "iPhone 13 Pro"
+          },
+          "deviceType": {
+            "type": "string",
+            "description": "Device type (Mobile, Tablet, Desktop)",
+            "example": "Mobile"
+          },
+          "userAgent": {
+            "type": "string",
+            "description": "User agent string",
+            "example": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+          },
+          "ipAddress": {
+            "type": "string",
+            "description": "IP address of the client",
+            "example": "192.168.1.100"
+          },
+          "location": {
+            "type": "string",
+            "description": "Location information (city, country, etc.)",
+            "example": "New York, USA"
+          },
+          "expiresAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "Access token expiry date/time",
+            "example": "2025-12-31T23:59:59.000Z"
+          },
+          "refreshExpiresAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "Refresh token expiry date/time",
+            "example": "2026-01-31T23:59:59.000Z"
+          }
+        },
+        "required": [
+          "user_id",
+          "accessToken",
+          "refreshToken",
+          "deviceId",
+          "expiresAt",
+          "refreshExpiresAt"
+        ]
+      },
+      "UpdateUserSessionDto": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "User identifier (e.g. User document ID)",
+            "example": "665f1a4b2c3d4e5f6a7b8c9d"
+          },
+          "refreshToken": {
+            "type": "string",
+            "description": "Refresh token value",
+            "example": "refresh-token-uuid-or-jwt"
+          },
+          "accessToken": {
+            "type": "string",
+            "description": "Access token value",
+            "example": "access-token-jwt"
+          },
+          "deviceInfo": {
+            "type": "string",
+            "description": "Information about the device (agent, OS, etc.)",
+            "example": "Chrome on Windows 11"
+          },
+          "deviceName": {
+            "type": "string",
+            "description": "Device name or description",
+            "example": "iPhone 13 Pro"
+          },
+          "deviceType": {
+            "type": "string",
+            "description": "Device type (Mobile, Tablet, Desktop)",
+            "example": "Mobile"
+          },
+          "ipAddress": {
+            "type": "string",
+            "description": "IP address of the client",
+            "example": "192.168.1.100"
+          },
+          "location": {
+            "type": "string",
+            "description": "Location information (city, country, etc.)",
+            "example": "New York, USA"
+          },
+          "expiresAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "Session expiry date/time",
+            "example": "2025-12-31T23:59:59.000Z"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "When the session was created",
+            "example": "2025-01-01T10:00:00.000Z"
+          },
+          "revokedAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "When the session was revoked",
+            "example": "2025-01-02T10:00:00.000Z"
+          }
+        }
+      },
+      "CreateLoginLogDto": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "User identifier (if user exists)",
+            "example": "665f1a4b2c3d4e5f6a7b8c9d"
+          },
+          "emailAttempted": {
+            "type": "string",
+            "description": "Email address that was used to attempt login",
+            "example": "user@example.com"
+          },
+          "userAgent": {
+            "type": "string",
+            "description": "User agent string of the client",
+            "example": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)..."
+          },
+          "ipAddress": {
+            "type": "string",
+            "description": "IP address of the client",
+            "example": "192.168.1.100"
+          },
+          "status": {
+            "type": "string",
+            "description": "Login attempt status (success, failed, blocked)",
+            "example": "success"
+          },
+          "failureReason": {
+            "type": "string",
+            "description": "Failure reason if status is not success",
+            "example": "Invalid password"
+          },
+          "deviceName": {
+            "type": "string",
+            "description": "Device name",
+            "example": "iPhone 13 Pro"
+          },
+          "deviceType": {
+            "type": "string",
+            "description": "Device type (Mobile, Tablet, Desktop)",
+            "example": "Mobile"
+          },
+          "deviceInfo": {
+            "type": "string",
+            "description": "Device information (Browser on OS)",
+            "example": "Chrome on Windows 10/11"
+          },
+          "location": {
+            "type": "string",
+            "description": "Location information",
+            "example": "New York, USA"
+          },
+          "loginAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "Login timestamp",
+            "example": "2025-01-01T10:00:00.000Z"
+          }
+        },
+        "required": [
+          "emailAttempted",
+          "status"
+        ]
+      },
+      "UpdateLoginLogDto": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "User identifier (if user exists)",
+            "example": "665f1a4b2c3d4e5f6a7b8c9d"
+          },
+          "emailAttempted": {
+            "type": "string",
+            "description": "Email address that was used to attempt login",
+            "example": "user@example.com"
+          },
+          "userAgent": {
+            "type": "string",
+            "description": "User agent string of the client",
+            "example": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)..."
+          },
+          "ipAddress": {
+            "type": "string",
+            "description": "IP address of the client",
+            "example": "192.168.1.100"
+          },
+          "status": {
+            "type": "string",
+            "description": "Login attempt status",
+            "example": "success"
+          },
+          "failureReason": {
+            "type": "string",
+            "description": "Failure reason if status is not success",
+            "example": "Invalid password"
+          },
+          "deviceName": {
+            "type": "string",
+            "description": "Device name",
+            "example": "iPhone 13 Pro"
+          },
+          "deviceType": {
+            "type": "string",
+            "description": "Device type (Mobile, Tablet, Desktop)",
+            "example": "Mobile"
+          },
+          "deviceInfo": {
+            "type": "string",
+            "description": "Device information (Browser on OS)",
+            "example": "Chrome on Windows 10/11"
+          },
+          "location": {
+            "type": "string",
+            "description": "Location information",
+            "example": "New York, USA"
+          },
+          "loginAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "Login timestamp",
+            "example": "2025-01-01T10:00:00.000Z"
+          }
+        }
+      },
+      "CreateMenuDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Display name of the menu item",
+            "example": "Dashboard"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the menu item",
+            "example": "active"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateMenuDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Display name of the menu item",
+            "example": "Dashboard"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the menu item",
+            "example": "active"
+          }
+        }
+      },
+      "CreateMenuRouteDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Display name of the menu route",
+            "example": "Dashboard"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL or path this route points to",
+            "example": "/dashboard"
+          },
+          "menu_id": {
+            "type": "string",
+            "description": "Menu ID this route belongs to",
+            "example": "507f1f77bcf86cd799439011"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the route",
+            "example": "active"
+          }
+        },
+        "required": [
+          "name",
+          "url",
+          "menu_id"
+        ]
+      },
+      "UpdateMenuRouteDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Display name of the menu route",
+            "example": "Dashboard"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL or path this route points to",
+            "example": "/dashboard"
+          },
+          "menu_id": {
+            "type": "string",
+            "description": "Menu ID this route belongs to",
+            "example": "507f1f77bcf86cd799439011"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the route",
+            "example": "active"
+          }
+        }
+      },
+      "CreateAuditLogDto": {
+        "type": "object",
+        "properties": {
+          "actor_user_id": {
+            "type": "string",
+            "description": "User ID of the actor performing the action",
+            "example": "665f1a4b2c3d4e5f6a7b8c9d"
+          },
+          "target_type": {
+            "type": "string",
+            "description": "Type of target affected (e.g. user, role, menu)",
+            "example": "user"
+          },
+          "action": {
+            "type": "string",
+            "description": "Action performed",
+            "example": "USER_CREATED"
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of the change",
+            "example": "User john.doe@example.com was created"
+          },
+          "ipAddress": {
+            "type": "string",
+            "description": "IP address from which the action was performed",
+            "example": "192.168.1.100"
+          }
+        },
+        "required": [
+          "actor_user_id",
+          "target_type",
+          "action"
+        ]
+      },
+      "UpdateAuditLogDto": {
+        "type": "object",
+        "properties": {
+          "actor_user_id": {
+            "type": "string",
+            "description": "User ID of the actor performing the action",
+            "example": "665f1a4b2c3d4e5f6a7b8c9d"
+          },
+          "target_type": {
+            "type": "string",
+            "description": "Type of target affected (e.g. user, role, menu)",
+            "example": "user"
+          },
+          "action": {
+            "type": "string",
+            "description": "Action performed",
+            "example": "USER_CREATED"
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of the change",
+            "example": "User john.doe@example.com was created"
+          },
+          "ipAddress": {
+            "type": "string",
+            "description": "IP address from which the action was performed",
+            "example": "192.168.1.100"
+          }
+        }
+      },
+      "CreateUserResetDto": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "User identifier (e.g. User document ID)",
+            "example": "665f1a4b2c3d4e5f6a7b8c9d"
+          },
+          "code": {
+            "type": "string",
+            "description": "Reset code or token",
+            "example": "123456"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of reset (e.g. password, email-verification)",
+            "example": "password"
+          },
+          "expiresAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "When this reset link/code expires",
+            "example": "2025-12-31T23:59:59.000Z"
+          },
+          "link": {
+            "type": "string",
+            "description": "Link sent to the user to perform the reset",
+            "example": "https://example.com/reset?token=abc123"
+          }
+        },
+        "required": [
+          "user_id",
+          "code",
+          "type",
+          "expiresAt",
+          "link"
+        ]
+      },
+      "UpdateUserResetDto": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "description": "User identifier (e.g. User document ID)",
+            "example": "665f1a4b2c3d4e5f6a7b8c9d"
+          },
+          "code": {
+            "type": "string",
+            "description": "Reset code or token",
+            "example": "123456"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of reset (e.g. password, email-verification)",
+            "example": "password"
+          },
+          "expiresAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "When this reset link/code expires",
+            "example": "2025-12-31T23:59:59.000Z"
+          },
+          "link": {
+            "type": "string",
+            "description": "Link sent to the user to perform the reset",
+            "example": "https://example.com/reset?token=abc123"
+          }
+        }
+      },
+      "RegisterDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "description": "User email for registration",
+            "example": "user@example.com"
+          },
+          "username": {
+            "type": "string",
+            "description": "Unique username",
+            "example": "john_doe"
+          },
+          "password": {
+            "type": "string",
+            "description": "Password (will be hashed before saving)",
+            "example": "MyStrongP@ssw0rd"
+          },
+          "fullName": {
+            "type": "string",
+            "description": "Full name of the user",
+            "example": "John Doe"
+          },
+          "phone": {
+            "type": "string",
+            "description": "Optional phone number",
+            "example": "+1-555-1234567"
+          },
+          "profilePhoto": {
+            "type": "string",
+            "description": "Optional profile photo URL",
+            "example": "https://example.com/avatar.jpg"
+          },
+          "roles": {
+            "description": "Initial roles for the user",
+            "example": [
+              "user"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "email",
+          "username",
+          "password",
+          "fullName"
+        ]
+      },
+      "LoginDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "description": "User email for login",
+            "example": "user@example.com"
+          },
+          "password": {
+            "type": "string",
+            "description": "User password",
+            "example": "MyStrongP@ssw0rd"
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ]
+      },
+      "CreateEventTypeDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the event type",
+            "example": "Conference"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly slug for the event type (auto-generated from name if not provided)",
+            "example": "conference"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the event type",
+            "example": "Business conferences and seminars"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the event type",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateEventTypeDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the event type",
+            "example": "Conference"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly slug for the event type",
+            "example": "conference"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the event type",
+            "example": "Business conferences and seminars"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the event type",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        }
+      },
+      "CreateGameTypeDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the game mode",
+            "example": "Arcade"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly slug for the game mode (auto-generated from name if not provided)",
+            "example": "arcade"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the game mode",
+            "example": "Fast-paced arcade-style games"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the game mode",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateGameTypeDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the game mode",
+            "example": "Arcade"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly slug for the game mode",
+            "example": "arcade"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the game mode",
+            "example": "Fast-paced arcade-style games"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the game mode",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        }
+      },
+      "CreateEligibilityDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the eligibility",
+            "example": "Adult"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly slug for the eligibility (auto-generated from name if not provided)",
+            "example": "adult"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the eligibility",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateEligibilityDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the eligibility",
+            "example": "Adult"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly slug for the eligibility",
+            "example": "adult"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the eligibility",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        }
+      },
+      "CreateGridSizeDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the grid size",
+            "example": "Small"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly slug for the grid size (auto-generated from name if not provided)",
+            "example": "small"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateGridSizeDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the grid size",
+            "example": "Small"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly slug for the grid size",
+            "example": "small"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        }
+      },
+      "CreateEventDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the event",
+            "example": "Tech Conference 2024"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly slug for the event (auto-generated from name if not provided)",
+            "example": "tech-conference-2024"
+          },
+          "category_id": {
+            "type": "string",
+            "description": "Category ID (references Categories)",
+            "example": "665f1a4b2c3d4e5f6a7b8d0e"
+          },
+          "event_type_id": {
+            "type": "string",
+            "description": "Event Type ID (references EventTypes)",
+            "example": "665f1a4b2c3d4e5f6a7b8d0e"
+          },
+          "start_date": {
+            "type": "string",
+            "description": "Start date/time for the event (ISO string)",
+            "example": "2026-03-01T09:00:00Z"
+          },
+          "end_date": {
+            "type": "string",
+            "description": "End date/time for the event (ISO string)",
+            "example": "2026-03-01T17:00:00Z"
+          },
+          "eligibility_id": {
+            "type": "string",
+            "description": "Eligibility ID (references Eligibilities)",
+            "example": "665f1a4b2c3d4e5f6a7b8d0e"
+          },
+          "winning_condition": {
+            "type": "string",
+            "description": "Winning condition (text input)",
+            "example": "First to complete 5 rounds"
+          },
+          "game_type_id": {
+            "type": "string",
+            "description": "Game Type ID (references Game Types)",
+            "example": "665f1a4b2c3d4e5f6a7b8d0e"
+          },
+          "max_participants": {
+            "type": "number",
+            "description": "Maximum number of participants",
+            "example": 100
+          },
+          "reward_id": {
+            "type": "string",
+            "description": "Reward ID (references Rewards module)",
+            "example": "665f1a4b2c3d4e5f6a7b8d0e"
+          },
+          "rewards_value": {
+            "type": "number",
+            "description": "Reward value (points, amount, etc.)",
+            "example": 500
+          },
+          "distribution": {
+            "type": "string",
+            "description": "Rewards distribution method",
+            "example": "top-3"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the event",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "description": "Event description",
+            "example": "Annual tech conference"
+          }
+        },
+        "required": [
+          "name",
+          "event_type_id"
+        ]
+      },
+      "UpdateEventDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the event",
+            "example": "Tech Conference 2024"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly slug for the event",
+            "example": "tech-conference-2024"
+          },
+          "category_id": {
+            "type": "string",
+            "description": "Category ID (references Categories)",
+            "example": "665f1a4b2c3d4e5f6a7b8d0e"
+          },
+          "event_type_id": {
+            "type": "string",
+            "description": "Event Type ID (references EventTypes)",
+            "example": "665f1a4b2c3d4e5f6a7b8d0e"
+          },
+          "start_date": {
+            "type": "string",
+            "description": "Start date/time for the event (ISO string)",
+            "example": "2026-03-01T09:00:00Z"
+          },
+          "end_date": {
+            "type": "string",
+            "description": "End date/time for the event (ISO string)",
+            "example": "2026-03-01T17:00:00Z"
+          },
+          "eligibility_id": {
+            "type": "string",
+            "description": "Eligibility ID (references Eligibilities)",
+            "example": "665f1a4b2c3d4e5f6a7b8d0e"
+          },
+          "winning_condition": {
+            "type": "string",
+            "description": "Winning condition (text input)",
+            "example": "First to complete 5 rounds"
+          },
+          "game_type_id": {
+            "type": "string",
+            "description": "Game Type ID (references Game Types)",
+            "example": "665f1a4b2c3d4e5f6a7b8d0e"
+          },
+          "max_participants": {
+            "type": "number",
+            "description": "Maximum number of participants",
+            "example": 100
+          },
+          "reward_id": {
+            "type": "string",
+            "description": "Reward ID (references Rewards module)",
+            "example": "665f1a4b2c3d4e5f6a7b8d0e"
+          },
+          "rewards_value": {
+            "type": "number",
+            "description": "Reward value (points, amount, etc.)",
+            "example": 500
+          },
+          "distribution": {
+            "type": "string",
+            "description": "Rewards distribution method",
+            "example": "top-3"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the event",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "description": "Event description",
+            "example": "Annual tech conference"
+          }
+        }
+      },
+      "CreatePropertyTypeDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the property type",
+            "example": "Apartment"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly slug for the property type (auto-generated from name if not provided)",
+            "example": "apartment"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the property type",
+            "example": "Residential apartment units"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the property type",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdatePropertyTypeDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the property type",
+            "example": "Apartment"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly slug for the property type (auto-generated from name if name is updated)",
+            "example": "apartment"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the property type",
+            "example": "Residential apartment units"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the property type",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        }
+      },
+      "CreateFacilityDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the facility",
+            "example": "Swimming Pool"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly slug for the facility (auto-generated from name if not provided)",
+            "example": "swimming-pool"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the facility",
+            "example": "Outdoor swimming pool with modern amenities"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the facility",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateFacilityDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the facility",
+            "example": "Swimming Pool"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly slug for the facility (auto-generated from name if name is updated)",
+            "example": "swimming-pool"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the facility",
+            "example": "Outdoor swimming pool with modern amenities"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the facility",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        }
+      },
+      "CreateRoomTypeDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the room type",
+            "example": "Deluxe Suite"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly slug for the room type (auto-generated from name if not provided)",
+            "example": "deluxe-suite"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the room type",
+            "example": "Spacious room with premium amenities"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the room type",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateRoomTypeDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the room type",
+            "example": "Deluxe Suite"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly slug for the room type (auto-generated from name if name is updated)",
+            "example": "deluxe-suite"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the room type",
+            "example": "Spacious room with premium amenities"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the room type",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        }
+      },
+      "CreateCategoryDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the category",
+            "example": "Lodging"
+          },
+          "description": {
+            "type": "string",
+            "description": "Short description of the category",
+            "example": "Accommodation and lodging facilities"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the category",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          },
+          "visibility_type": {
+            "type": "string",
+            "description": "Visibility type of the category",
+            "example": "FREE",
+            "enum": [
+              "FREE",
+              "PREMIUM",
+              "ORG_ONLY"
+            ]
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateCategoryDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the category",
+            "example": "Lodging"
+          },
+          "description": {
+            "type": "string",
+            "description": "Short description of the category",
+            "example": "Accommodation and lodging facilities"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the category",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          },
+          "visibility_type": {
+            "type": "string",
+            "description": "Visibility type of the category",
+            "example": "FREE",
+            "enum": [
+              "FREE",
+              "PREMIUM",
+              "ORG_ONLY"
+            ]
+          }
+        }
+      },
+      "CreateSubCategoryDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the sub category",
+            "example": "Lodging"
+          },
+          "description": {
+            "type": "string",
+            "description": "Short description of the sub category",
+            "example": "Accommodation and lodging facilities"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the sub category",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          },
+          "category_id": {
+            "type": "string",
+            "description": "Category ID from categories collection",
+            "example": "65f1c2a4b1234567890abcd1"
+          }
+        },
+        "required": [
+          "name",
+          "category_id"
+        ]
+      },
+      "UpdateSubCategoryDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the sub category",
+            "example": "Lodging"
+          },
+          "description": {
+            "type": "string",
+            "description": "Short description of the sub category",
+            "example": "Accommodation and lodging facilities"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status of the sub category",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          },
+          "category_id": {
+            "type": "string",
+            "description": "Category ID from categories collection",
+            "example": "65f1c2a4b1234567890abcd1"
+          }
+        }
+      },
+      "CreateCardGenerationDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name",
+            "example": "Standard"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Slug (auto-generated from name if not provided)",
+            "example": "standard"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateCardGenerationDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name",
+            "example": "Standard"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Slug",
+            "example": "standard"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        }
+      },
+      "CreateWinningPatternDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name",
+            "example": "Line"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Slug (auto-generated from name if not provided)",
+            "example": "line"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          },
+          "pattern_type": {
+            "type": "string",
+            "description": "Pattern type: BASIC (all users) or ADVANCED (premium only)",
+            "example": "BASIC",
+            "enum": [
+              "BASIC",
+              "ADVANCED"
+            ]
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateWinningPatternDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name",
+            "example": "Line"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Slug",
+            "example": "line"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          },
+          "pattern_type": {
+            "type": "string",
+            "description": "Pattern type: BASIC or ADVANCED",
+            "enum": [
+              "BASIC",
+              "ADVANCED"
+            ]
+          }
+        }
+      },
+      "CreateWinningPatternTypeDto": {
+        "type": "object",
+        "properties": {
+          "winning_pattern_id": {
+            "type": "string",
+            "description": "Winning pattern ID",
+            "example": "65f1c2a4b1234567890abcd1"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name",
+            "example": "Line"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Slug (auto-generated from name if not provided)",
+            "example": "line"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description",
+            "example": "Single line win"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        },
+        "required": [
+          "winning_pattern_id",
+          "name"
+        ]
+      },
+      "UpdateWinningPatternTypeDto": {
+        "type": "object",
+        "properties": {
+          "winning_pattern_id": {
+            "type": "string",
+            "description": "Winning pattern ID"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Slug"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        }
+      },
+      "CreateGameDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Game name",
+            "example": "Weekend Bingo"
+          },
+          "event_id": {
+            "type": "string",
+            "description": "Event ID (references Events)",
+            "example": "665f1a4b2c3d4e5f6a7b8d0e"
+          },
+          "category_id": {
+            "type": "string",
+            "description": "Category ID (references Categories)"
+          },
+          "grid_size_id": {
+            "type": "string",
+            "description": "Grid Size ID (references GridSizes)"
+          },
+          "card_gen_id": {
+            "type": "string",
+            "description": "Card Generation Type ID (references CardGenerationTypes)"
+          },
+          "game_type_id": {
+            "type": "string",
+            "description": "Game Type ID (references Game Types)"
+          },
+          "winning_patt_id": {
+            "type": "string",
+            "description": "Winning Pattern ID (references WinningPatterns)"
+          },
+          "winning_pattern_type_id": {
+            "type": "string",
+            "description": "Winning Pattern Type ID (references WinningPatternTypes, must belong to winning_patt_id)"
+          },
+          "access_control": {
+            "type": "boolean",
+            "description": "Access control: false = open, true = closed",
+            "default": false
+          },
+          "max_player": {
+            "type": "number",
+            "description": "Maximum players",
+            "example": 10
+          },
+          "game_start_date": {
+            "type": "string",
+            "description": "Game start date (ISO string)",
+            "example": "2026-03-01T09:00:00Z"
+          },
+          "description": {
+            "type": "string",
+            "description": "Game description"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status",
+            "example": "DRAFT",
+            "enum": [
+              "DRAFT",
+              "SCHEDULED",
+              "ACTIVE",
+              "COMPLETED"
+            ]
+          },
+          "game_mode": {
+            "type": "string",
+            "description": "Game mode: STANDARD = first winner ends; ELIMINATION = until 1 left",
+            "enum": [
+              "STANDARD",
+              "ELIMINATION"
+            ],
+            "default": "STANDARD"
+          },
+          "winner_id": {
+            "type": "object",
+            "description": "Winner user ID (nullable)",
+            "nullable": true
+          },
+          "created_by": {
+            "type": "string",
+            "description": "User ID creating the game (for premium/ADVANCED checks). Omit for admin bypass."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "JoinGameDto": {
+        "type": "object",
+        "properties": {
+          "gameCode": {
+            "type": "string",
+            "description": "Game code (e.g. GM001)"
+          },
+          "userId": {
+            "type": "string",
+            "description": "User ID joining the game"
+          }
+        },
+        "required": [
+          "gameCode",
+          "userId"
+        ]
+      },
+      "LeaveGameDto": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "description": "User ID leaving the game"
+          }
+        },
+        "required": [
+          "userId"
+        ]
+      },
+      "UpdateGameDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Game name"
+          },
+          "event_id": {
+            "type": "string",
+            "description": "Event ID (references Events)"
+          },
+          "category_id": {
+            "type": "string",
+            "description": "Category ID (references Categories)"
+          },
+          "grid_size_id": {
+            "type": "string",
+            "description": "Grid Size ID (references GridSizes)"
+          },
+          "card_gen_id": {
+            "type": "string",
+            "description": "Card Generation Type ID (references CardGenerationTypes)"
+          },
+          "game_type_id": {
+            "type": "string",
+            "description": "Game Type ID (references Game Types)"
+          },
+          "winning_patt_id": {
+            "type": "string",
+            "description": "Winning Pattern ID (references WinningPatterns)"
+          },
+          "winning_pattern_type_id": {
+            "type": "string",
+            "description": "Winning Pattern Type ID (references WinningPatternTypes)"
+          },
+          "winning_pattern_type_ids": {
+            "description": "Winning Pattern Type IDs – win when ANY is completed (e.g. Full House or Any Horizontal Line)",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "access_control": {
+            "type": "boolean",
+            "description": "Access control: false = open, true = closed"
+          },
+          "max_player": {
+            "type": "number",
+            "description": "Maximum players"
+          },
+          "game_start_date": {
+            "type": "string",
+            "description": "Game start date (ISO string)"
+          },
+          "description": {
+            "type": "string",
+            "description": "Game description"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status",
+            "enum": [
+              "DRAFT",
+              "SCHEDULED",
+              "ACTIVE",
+              "COMPLETED"
+            ]
+          },
+          "game_mode": {
+            "type": "string",
+            "description": "Game mode",
+            "enum": [
+              "STANDARD",
+              "ELIMINATION"
+            ]
+          },
+          "winner_id": {
+            "type": "object",
+            "description": "Winner user ID (nullable)",
+            "nullable": true
+          },
+          "player_ids": {
+            "description": "Player user IDs (joined players)",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "waitlist_ids": {
+            "description": "Waitlist user IDs (when game is full)",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "eliminated_player_ids": {
+            "description": "Eliminated player IDs (ELIMINATION mode)",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "CreateInviteDto": {
+        "type": "object",
+        "properties": {
+          "game_id": {
+            "type": "string",
+            "description": "Game ID"
+          },
+          "invitedUserId": {
+            "type": "string",
+            "description": "User ID to invite"
+          },
+          "invitedBy": {
+            "type": "string",
+            "description": "User ID of the inviter (creator)"
+          }
+        },
+        "required": [
+          "game_id",
+          "invitedUserId",
+          "invitedBy"
+        ]
+      },
+      "CreateRewardDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name",
+            "example": "Gold Trophy"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Slug (auto-generated from name if not provided)",
+            "example": "gold-trophy"
+          },
+          "value": {
+            "type": "number",
+            "description": "Value (e.g. points, amount)",
+            "example": 100
+          },
+          "status": {
+            "type": "string",
+            "description": "Status",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateRewardDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name",
+            "example": "Gold Trophy"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Slug",
+            "example": "gold-trophy"
+          },
+          "value": {
+            "type": "number",
+            "description": "Value",
+            "example": 100
+          },
+          "status": {
+            "type": "string",
+            "description": "Status",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        }
+      },
+      "CreateAchievementCriteriaDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name",
+            "example": "First Win"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Slug (auto-generated from name if not provided)",
+            "example": "first-win"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateAchievementCriteriaDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name",
+            "example": "First Win"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Slug",
+            "example": "first-win"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status",
+            "example": "active",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        }
+      },
+      "CreateAssetDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Title",
+            "example": "Krishna"
+          },
+          "code": {
+            "type": "string",
+            "description": "Unique code (e.g. BNG001). Auto-generated if not provided.",
+            "example": "BNG001"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Slug (auto-generated from title if not provided)",
+            "example": "krishna"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description"
+          },
+          "imageUrl": {
+            "type": "string",
+            "description": "Image URL or path",
+            "example": "/uploads/asset.jpg"
+          },
+          "thumbnailUrl": {
+            "type": "string",
+            "description": "Thumbnail URL"
+          },
+          "categoryId": {
+            "type": "string",
+            "description": "Category ID",
+            "example": "507f1f77bcf86cd799439011"
+          },
+          "subcategoryId": {
+            "type": "string",
+            "description": "Subcategory ID"
+          },
+          "accessLevel": {
+            "type": "string",
+            "description": "Access level",
+            "enum": [
+              "FREE",
+              "PREMIUM",
+              "ORG_ONLY"
+            ],
+            "default": "FREE"
+          },
+          "isPlaceholder": {
+            "type": "boolean",
+            "description": "Is placeholder for custom square",
+            "default": false
+          },
+          "status": {
+            "type": "string",
+            "description": "Status",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ],
+            "default": "ACTIVE"
+          },
+          "sortOrder": {
+            "type": "number",
+            "description": "Sort order for UI",
+            "default": 0
+          },
+          "tags": {
+            "description": "Tags for search",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "createdBy": {
+            "type": "string",
+            "description": "Created by user ID"
+          }
+        },
+        "required": [
+          "title",
+          "imageUrl",
+          "categoryId"
+        ]
+      },
+      "UpdateAssetDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Title"
+          },
+          "code": {
+            "type": "string",
+            "description": "Unique code (e.g. BNG001)"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Slug"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description"
+          },
+          "imageUrl": {
+            "type": "string",
+            "description": "Image URL or path"
+          },
+          "thumbnailUrl": {
+            "type": "string",
+            "description": "Thumbnail URL"
+          },
+          "categoryId": {
+            "type": "string",
+            "description": "Category ID"
+          },
+          "subcategoryId": {
+            "type": "string",
+            "description": "Subcategory ID"
+          },
+          "accessLevel": {
+            "type": "string",
+            "description": "Access level",
+            "enum": [
+              "FREE",
+              "PREMIUM",
+              "ORG_ONLY"
+            ]
+          },
+          "isPlaceholder": {
+            "type": "boolean",
+            "description": "Is placeholder"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ]
+          },
+          "sortOrder": {
+            "type": "number",
+            "description": "Sort order"
+          },
+          "tags": {
+            "description": "Tags",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "updatedBy": {
+            "type": "string",
+            "description": "Updated by user ID"
+          }
+        }
+      },
+      "GenerateCardDto": {
+        "type": "object",
+        "properties": {
+          "game_id": {
+            "type": "string",
+            "description": "Game ID",
+            "example": "507f1f77bcf86cd799439011"
+          },
+          "user_id": {
+            "type": "string",
+            "description": "User ID (for subscription/eligible assets). Omit for admin."
+          }
+        },
+        "required": [
+          "game_id"
+        ]
+      },
+      "SquareItemDto": {
+        "type": "object",
+        "properties": {
+          "asset_id": {
+            "type": "object"
+          },
+          "isCustom": {
+            "type": "boolean"
+          },
+          "customText": {
+            "type": "string"
+          },
+          "claimed": {
+            "type": "boolean"
+          },
+          "claimedAt": {
+            "type": "object"
+          }
+        }
+      },
+      "UpdateCardSquaresDto": {
+        "type": "object",
+        "properties": {
+          "squares": {
+            "description": "Full or partial squares array (by index)",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SquareItemDto"
+            }
+          }
+        }
+      },
+      "ClaimSquareDto": {
+        "type": "object",
+        "properties": {
+          "squareIndex": {
+            "type": "number",
+            "description": "Zero-based index of the square to claim"
+          },
+          "userId": {
+            "type": "string",
+            "description": "User ID claiming the square (card owner)"
+          }
+        },
+        "required": [
+          "squareIndex",
+          "userId"
+        ]
+      }
+    }
+  }
+}
